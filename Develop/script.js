@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 //variables
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var lower = "abcdefghijklmnopqrstuvwxyz".split("");
-var special = "!@#$%^&*()[]{}<>?/\|+=-_".split("");
+var special = "!@#$%^&*()[]{}<>?/.,+=-_".split("");
 var numbers = "1234567890".split("");
 var length = "";
 var finalPassword = [];
@@ -13,7 +13,9 @@ var password = [];
 function generatePassword () {
   length = window.prompt("Please enter a password length between 8 and 128 characters.");
 
-  if (length < 8 && length > 128) {
+  console.log(length);
+
+  if (length < 8 || length > 128) {
     window.alert("The password must be between 8 and 128 characters long.");
     return;
   }
@@ -35,8 +37,14 @@ function generatePassword () {
       password = password.concat(numbers);
     }
 
-// randomize the characters in the password?
+    console.log(password);
 
+// randomize the characters in the password?
+    for (i = 0; i < length; i++) {
+       password = Math.floor(Math.random() * length);
+    }
+    
+    console.log(password);
 
 }
 
