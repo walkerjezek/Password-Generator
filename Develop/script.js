@@ -24,26 +24,31 @@ function generatePassword () {
     if (upperPrompt === true) {
       password = password.concat(upper);
     }
+    console.log(password);
   var lowerPrompt = window.confirm("Would you like to include lowercase characters?");
     if (lowerPrompt === true) {
       password = password.concat(lower);
     }
+    console.log(password);
   var specialPrompt = window.confirm("Would you like to include special characters?");
-    if (special === true) {
+    if (specialPrompt === true) {
       password = password.concat(special);
     }
+    console.log(password);
   var numbersPrompt = window.confirm("Would you like to include numbers?");
-    if (numbers === true) {
+    if (numbersPrompt === true) {
       password = password.concat(numbers);
     }
-
     console.log(password);
+
+    //making sure all the characters are included
+    console.log(password.toString());
 
 // randomize the characters in the password?
     for (i = 0; i < length; i++) {
-       password = Math.floor(Math.random() * length);
+      password += Math.floor(Math.random() * length);
     }
-    
+
     console.log(password);
 
 }
