@@ -17,7 +17,7 @@ function generatePassword () {
   var password = "";
   var characters = "";
 
-
+// Check to make sure the length is correct 
   if (length < 8 || length > 128) {
     window.alert("The password must be between 8 and 128 characters long.");
     return password;
@@ -51,13 +51,13 @@ function generatePassword () {
       var index = Math.floor(Math.random() * numbers.length);
       password += numbers.charAt(index);
     }
-
+    // Make sure at least one option is picked.
   if (password.length === 0) {
     window.alert("You must choose at least one option.");
     return password;
   } 
 
-// randomize the characters in the password?
+// randomize the characters in the password
     for (i = password.length; i < length; i++) {
       var index = Math.floor(Math.random() * characters.length);
       password += characters.charAt(index);
