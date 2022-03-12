@@ -4,5 +4,5 @@ Password generator. Using Javascript I created an a process that asks how many c
 
 
 
+![image](https://user-images.githubusercontent.com/98861520/158024422-488fadb9-3b53-4c93-a0a9-0b1e34f1555a.png)
 
-[Screen Shot 2022-03-12 at 8 29 40 AM](https://user-images.githubusercontent.com/98861520/158024290-0de673b8-e42d-484c-ae46-ff24ee677fe9.png)
